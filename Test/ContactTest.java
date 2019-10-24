@@ -18,6 +18,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.Keys;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
+
 public class ContactTest {
     private WebDriver driver;
     private Map<String, Object> vars;
@@ -36,14 +38,19 @@ public class ContactTest {
     public void testfallKontakt() {
         driver.get("http://testarwordpress.local/");
         driver.manage().window().setSize(new Dimension(1259, 728));
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.findElement(By.cssSelector("#menu-item-3383 > a")).click();
-        driver.findElement(By.id("contact-3361-18-0-0-contact-name")).click();
-        driver.findElement(By.id("contact-3361-18-0-0-contact-name")).click();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        WebElement element = driver.findElement(By.id("contact-3361-18-0-0"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+
         {
-            WebElement element = driver.findElement(By.id("contact-3361-18-0-0-contact-name"));
+            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+            WebElement element2 = driver.findElement(By.id("contact-3361-18-0-0-contact-name"));
             Actions builder = new Actions(driver);
             builder.doubleClick(element).perform();
         }
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.findElement(By.id("contact-3361-18-0-0-contact-name")).sendKeys("George Sydby");
         driver.findElement(By.id("contact-3361-18-0-0-contact-email")).sendKeys("george.sydby@gmail.com");
         driver.findElement(By.cssSelector(".builder-contact-field-email > .control-input")).click();
