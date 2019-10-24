@@ -9,8 +9,8 @@
         <module name="ConilProjektet" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="ConilProjektet" target="1.5" />
+    <bytecodeTargetLevel target="11">
+      <module name="ConilProjektet" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
