@@ -31,12 +31,12 @@ public class ContactTest {
         vars = new HashMap<String, Object>();
     }
     @After
-    public void tearDown() {
+    /*public void tearDown() {
         driver.quit();
-    }
+    }*/
     @Test
     public void testfallKontakt() {
-        driver.get("https://dev.conil.se");
+        driver.get("http://testarwordpress.local/");
         driver.manage().window().setSize(new Dimension(1259, 728));
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.findElement(By.cssSelector("#menu-item-3383 > a")).click();
@@ -46,7 +46,7 @@ public class ContactTest {
 
         {
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-            WebElement element2 = driver.findElement(By.id("contact-3361-18-0-0-contact-name"));
+            //WebElement element2 = driver.findElement(By.id("contact-3361-18-0-0-contact-name"));
             Actions builder = new Actions(driver);
             builder.doubleClick(element).perform();
         }
@@ -61,5 +61,12 @@ public class ContactTest {
         driver.findElement(By.id("contact-3361-18-0-0-contact-message")).click();
         driver.findElement(By.id("contact-3361-18-0-0-contact-message")).sendKeys("Morötter");
         driver.findElement(By.cssSelector(".btn-primary")).click();
+
+        driver.get("http://testarwordpress.local:10001/");
+        driver.manage().window().setSize(new Dimension(1259, 728));
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        //driver.findElement(By.ByXPath(/html/body/div/div/div[2]/div[2]/div[1]/div[1]/div/div);
+        //Xpath=input[@name='/html/body/div/div/div[2]/div[2]/div[1]'];
+
     }
 }
