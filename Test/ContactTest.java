@@ -36,7 +36,7 @@ public class ContactTest {
     }
     @Test
     public void testfallKontakt() {
-        driver.get("http://testarwordpress.local/");
+        driver.get("https://dev.conil.se");
         driver.manage().window().setSize(new Dimension(1259, 728));
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.findElement(By.cssSelector("#menu-item-3383 > a")).click();
