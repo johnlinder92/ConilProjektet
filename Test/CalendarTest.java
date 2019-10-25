@@ -98,7 +98,7 @@ public class CalendarTest {
         driver.findElement(By.cssSelector(".input-group-btn:nth-child(3) .in-button-text")).click();
         assertThat(driver.switchTo().alert().getText(), is("Vill du verkligen radera valda bokningar?"));
         driver.switchTo().alert().accept();
-
+driver.close();
 
 
 
