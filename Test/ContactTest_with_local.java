@@ -20,7 +20,8 @@ import org.openqa.selenium.Keys;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-public class ContactTest {
+
+public class ContactTest_with_local {
     private WebDriver driver;
     private Map<String, Object> vars;
     JavascriptExecutor js;
@@ -31,9 +32,9 @@ public class ContactTest {
         vars = new HashMap<String, Object>();
     }
     @After
-    /*public void tearDown() {
+    public void tearDown() {
         driver.quit();
-    }*/
+    }
     @Test
     public void testfallKontakt() {
         driver.get("http://testarwordpress.local/");
@@ -46,7 +47,7 @@ public class ContactTest {
 
         {
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-            //WebElement element2 = driver.findElement(By.id("contact-3361-18-0-0-contact-name"));
+            WebElement element2 = driver.findElement(By.id("contact-3361-18-0-0-contact-name"));
             Actions builder = new Actions(driver);
             builder.doubleClick(element).perform();
         }
@@ -64,9 +65,14 @@ public class ContactTest {
 
         driver.get("http://testarwordpress.local:10001/");
         driver.manage().window().setSize(new Dimension(1259, 728));
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        //driver.findElement(By.ByXPath(/html/body/div/div/div[2]/div[2]/div[1]/div[1]/div/div);
-        //Xpath=input[@name='/html/body/div/div/div[2]/div[2]/div[1]'];
+        driver.findElement(By.cssSelector(".col-sm-4")).click();
+        driver.switchTo().frame(0);
+        String text = driver.findElement(By.cssSelector("p")).getText();
+        System.out.println(text);
+        assertEquals("Morötter",text);
+        //river.findElement(By.id("search")).click();
+        //driver.findElement(By.id("search")).sendKeys("Morötter");
+        //driver.findElement(By.cssSelector(".container-fluid > .col-md-10")).click();
 
     }
 }
