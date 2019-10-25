@@ -1,42 +1,64 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
-<test:project xmlns:test="http://maven.apache.org/POM/4.0.0"
-              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-              xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <test:modelVersion>4.0.0</test:modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-    <test:groupId>org.apache.maven.plugins</test:groupId>
-    <test:artifactId>maven-compiler-plugin</test:artifactId>
+    <groupId>Ttestttt</groupId>
+    <artifactId>ConilProjektet</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.5.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
 
-<test:dependencies>
-    <test:dependency>
-        <test:groupId>org.seleniumhq.selenium</test:groupId>
-        <test:artifactId>selenium-java</test:artifactId>
-        <test:version>3.141.59</test:version>
-    </test:dependency>
-    <test:dependency>
-    <test:groupId>org.junit.jupiter</test:groupId>
-    <test:artifactId>junit-jupiter-engine</test:artifactId>
-    <test:version>5.5.2</test:version>
-    <test:scope>test</test:scope>
-</test:dependency>
-    <test:dependency>
-        <test:groupId>org.seleniumhq.selenium</test:groupId>
-        <test:artifactId>selenium-chrome-driver</test:artifactId>
-        <test:version>3.141.59</test:version>
-    </test:dependency>
-    <test:dependency>
-        <test:groupId>junit</test:groupId>
-        <test:artifactId>junit</test:artifactId>
-        <test:version>RELEASE</test:version>
-        <test:scope>test</test:scope>
-    </test:dependency>
-    <test:dependency>
-        <test:groupId>junit</test:groupId>
-        <test:artifactId>junit</test:artifactId>
-        <test:version>4.13-beta-3</test:version>
-        <test:scope>test</test:scope>
-    </test:dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13-beta-3</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
-</test:dependencies>
-    
-</test:project>
+</project>
+
+
+
