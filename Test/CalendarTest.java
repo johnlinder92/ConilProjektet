@@ -80,11 +80,15 @@ public class CalendarTest {
         driver.get("https://dev.conil.se/wp-login.php");
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.findElement(By.cssSelector(".login")).click();
         WebElement elementos = driver.findElement(By.id("user_login"));
+        driver.findElement(By.cssSelector(".login")).click();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         elementos.sendKeys("admin");
+        driver.findElement(By.cssSelector(".login")).click();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.findElement(By.id("user_pass")).sendKeys("password");
+
         driver.findElement(By.id("wp-submit")).click();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.findElement(By.linkText("Bokningskalender 2")).click();
